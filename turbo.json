@@ -1,0 +1,19 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.dev.vars"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "release": {
+      "outputs": ["dist/**"]
+    },
+    "dev": {
+      "cache": false
+    }
+  }
+}

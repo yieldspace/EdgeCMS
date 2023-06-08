@@ -1,0 +1,41 @@
+{
+  "name": "edge-cms",
+  "version": "0.0.1",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yieldspace/EdgeCMS"
+  },
+  "keywords": [
+    "typescript",
+    "cloudflare",
+    "cloudflare workers"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "sizumita <contact@yieldspace.app>",
+  "license": "MIT",
+  "scripts": {
+    "build": "run-p build:esbuild build:types",
+    "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir './dist'",
+    "build:esbuild": "node build.js",
+    "release": "np"
+  },
+  "dependencies": {
+    "hono": "^3.2.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230518.0",
+    "esbuild": "^0.17.19",
+    "np": "^8.0.2",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}
