@@ -1,40 +1,15 @@
 {
   "name": "edge-cms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist",
+    "dist/",
     "../../README.md",
     "package.json"
   ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./cms": {
-      "types": "./dist/cms.d.ts",
-      "import": "./dist/cms.js"
-    },
-    "./entry": {
-      "types": "./dist/entry/index.d.ts",
-      "import": "./dist/entry/index.js"
-    },
-    "./element": {
-      "types": "./dist/element/index.d.ts",
-      "import": "./dist/element/index.js"
-    },
-    "./database": {
-      "types": "./dist/database/index.d.ts",
-      "import": "./dist/database/index.js"
-    },
-    "./cdn": {
-      "types": "./dist/cdn/index.d.ts",
-      "import": "./dist/cdn/index.js"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yieldspace/EdgeCMS"
@@ -64,6 +39,7 @@
     "glob": "^10.2.7",
     "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.1",
+    "tsc": "^2.0.4",
     "typescript": "^5.1.3"
   }
 }

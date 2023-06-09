@@ -1,23 +1,23 @@
 import {build} from "esbuild";
-import * as glob from "glob"
 import pkg from "./package.json" assert { type: "json" }
 
 const entryFile = 'src/index.ts'
 const shared = {
     bundle: true,
-    entryPoints: glob.sync(["./src/*.ts", "./src/**/*.ts"]),
-    // entryPoints: [entryFile],
-    // external: Object.keys(pkg.dependencies),
+    entryPoints: [entryFile],
+    external: Object.keys(pkg.dependencies),
     logLevel: 'info',
-    minify: false,
+    minify: true,
     sourcemap: false,
 }
 
 build({
     ...shared,
     format: 'esm',
+    jsx: "automatic",
     outdir: './dist',
-    target: ['ES2022'],
+    platform: "browser",
+    target: "es2022",
     tsconfig: "tsconfig.json"
 })
 
