@@ -7,11 +7,12 @@
   },
   "scripts": {
     "build": "turbo run build",
-    "release": "turbo run release"
+    "release": "turbo run build && changeset version && changeset publish"
   },
   "workspaces": [
     "packages/*",
-    "workers/*"
+    "workers/*",
+    "examples/*"
   ],
   "packageManager": "yarn@3.6.0",
   "devDependencies": {
@@ -19,6 +20,18 @@
     "wrangler": "^3.1.0"
   },
   "dependencies": {
-    "@changesets/cli": "^2.26.1"
+    "@changesets/cli": "^2.26.1",
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.9",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.4",
+    "next": "13.4.4",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.3"
   }
 }

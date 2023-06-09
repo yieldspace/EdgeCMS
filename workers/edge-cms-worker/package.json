@@ -6,6 +6,9 @@
     "deploy": "wrangler publish",
     "start": "wrangler dev"
   },
+  "dependencies": {
+    "edge-cms": "*"
+  },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230419.0",
     "itty-router": "^3.0.12",
