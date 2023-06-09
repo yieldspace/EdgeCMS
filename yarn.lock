@@ -335,6 +335,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@edge-cms/d1-connector@workspace:packages/d1-connector":
+  version: 0.0.0-use.local
+  resolution: "@edge-cms/d1-connector@workspace:packages/d1-connector"
+  dependencies:
+    "@cloudflare/workers-types": ^4.20230518.0
+    drizzle-orm: ^0.26.5
+    esbuild: ^0.17.19
+    glob: ^10.2.7
+    npm-run-all: ^4.1.5
+    rimraf: ^5.0.1
+    tsc: ^2.0.4
+    typescript: ^5.1.3
+  languageName: unknown
+  linkType: soft
+
 "@edge-cms/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@edge-cms/ui@workspace:packages/ui"
@@ -2211,6 +2226,72 @@ __metadata:
   dependencies:
     esutils: ^2.0.2
   checksum: fd7673ca77fe26cd5cba38d816bc72d641f500f1f9b25b83e8ce28827fe2da7ad583a8da26ab6af85f834138cf8dae9f69b0cd6ab925f52ddab1754db44d99ce
+  languageName: node
+  linkType: hard
+
+"drizzle-orm@npm:^0.26.5":
+  version: 0.26.5
+  resolution: "drizzle-orm@npm:0.26.5"
+  peerDependencies:
+    "@aws-sdk/client-rds-data": ">=3"
+    "@cloudflare/workers-types": ">=3"
+    "@libsql/client": "*"
+    "@neondatabase/serverless": ">=0.1"
+    "@opentelemetry/api": ^1.4.1
+    "@planetscale/database": ">=1"
+    "@types/better-sqlite3": "*"
+    "@types/pg": "*"
+    "@types/sql.js": "*"
+    "@vercel/postgres": "*"
+    better-sqlite3: ">=7"
+    bun-types: "*"
+    knex: "*"
+    kysely: "*"
+    mysql2: ">=2"
+    pg: ">=8"
+    postgres: ">=3"
+    sql.js: ">=1"
+    sqlite3: ">=5"
+  peerDependenciesMeta:
+    "@aws-sdk/client-rds-data":
+      optional: true
+    "@cloudflare/workers-types":
+      optional: true
+    "@libsql/client":
+      optional: true
+    "@neondatabase/serverless":
+      optional: true
+    "@opentelemetry/api":
+      optional: true
+    "@planetscale/database":
+      optional: true
+    "@types/better-sqlite3":
+      optional: true
+    "@types/pg":
+      optional: true
+    "@types/sql.js":
+      optional: true
+    "@vercel/postgres":
+      optional: true
+    better-sqlite3:
+      optional: true
+    bun-types:
+      optional: true
+    knex:
+      optional: true
+    kysely:
+      optional: true
+    mysql2:
+      optional: true
+    pg:
+      optional: true
+    postgres:
+      optional: true
+    sql.js:
+      optional: true
+    sqlite3:
+      optional: true
+  checksum: 84b53de7841e51a1580dfcda152b621aaf8908446e7a81eba3998d05e111f803ff221d3a683d11dd30c685f16ccad3222849b8e439b2b0b288dc374f7479b9de
   languageName: node
   linkType: hard
 
