@@ -1,26 +1,30 @@
-const { build } = require('esbuild')
-const { dependencies } = require('./package.json')
+import {build} from "esbuild";
+import * as glob from "glob"
+import pkg from "./package.json" assert { type: "json" }
 
 const entryFile = 'src/index.ts'
 const shared = {
     bundle: true,
-    entryPoints: [entryFile],
-    external: Object.keys(dependencies),
+    entryPoints: glob.sync(["./src/*.ts", "./src/**/*.ts"]),
+    // entryPoints: [entryFile],
+    // external: Object.keys(pkg.dependencies),
     logLevel: 'info',
-    minify: true,
+    minify: false,
     sourcemap: false,
 }
 
 build({
     ...shared,
     format: 'esm',
-    outfile: './dist/index.esm.js',
-    target: ['ES6'],
+    outdir: './dist',
+    target: ['ES2022'],
+    tsconfig: "tsconfig.json"
 })
 
-build({
-    ...shared,
-    format: 'cjs',
-    outfile: './dist/index.cjs.js',
-    target: ['ES6'],
-})
+// build({
+//     ...shared,
+//     format: 'cjs',
+//     outfile: './dist/index.cjs.js',
+//     target: ['ES6'],
+//     tsconfig: "tsconfig.json"
+// })
